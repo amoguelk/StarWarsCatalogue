@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">Star Wars Catalogue</string>
+    <string name="splash_subtitle">Catálogo de personajes</string>
+    <string name="error">Error de conexión: %s</string>
+    <string name="height_txt">Altura: %s cm</string>
+    <string name="gender_txt">Género: %s</string>
+    <string name="birthYear_txt">Año de nacimiento: %s</string>
+    <string name="info_dialog_title">Información adicional</string>
+    <string name="rotation_text">Periodo de rotación: %s horas</string>
+    <string name="orbit_text">Periodo orbital: %s días</string>
+    <string name="diameter_text">Diámetro: %s km</string>
+    <string name="climate_text">Clima: %s</string>
+    <string name="terrain_text">Terreno: %s</string>
+    <string name="population_text">Población: %s</string>
+</resources>

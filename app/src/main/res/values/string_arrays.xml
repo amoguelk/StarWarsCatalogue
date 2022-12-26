@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="options">
+        <item>Planeta de orígen</item>
+        <item>Películas en las que ha aparecido</item>
+    </string-array>
+    <string-array name="movieURLs" translatable="false">
+        <item>https://aulavirtual.amaurypm.com/cm2023-1/sw1.jpg</item>
+        <item>https://aulavirtual.amaurypm.com/cm2023-1/sw2.jpg</item>
+        <item>https://aulavirtual.amaurypm.com/cm2023-1/sw3.jpg</item>
+        <item>https://aulavirtual.amaurypm.com/cm2023-1/sw4.jpg</item>
+        <item>https://aulavirtual.amaurypm.com/cm2023-1/sw5.jpg</item>
+        <item>https://aulavirtual.amaurypm.com/cm2023-1/sw6.jpg</item>
+    </string-array>
+</resources>

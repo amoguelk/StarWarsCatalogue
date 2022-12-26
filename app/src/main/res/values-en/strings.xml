@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_subtitle">Character catalogue</string>
+    <string name="error">Connection error: %s</string>
+    <string name="height_txt">Height: %s cm</string>
+    <string name="gender_txt">Gender: %s</string>
+    <string name="birthYear_txt">Birth year: %s</string>
+    <string name="info_dialog_title">Additional information</string>
+    <string name="rotation_text">Rotation period: %s hours</string>
+    <string name="orbit_text">Orbital period: %s days</string>
+    <string name="diameter_text">Diameter: %s km</string>
+    <string name="climate_text">Climate: %s</string>
+    <string name="terrain_text">Terrain: %s</string>
+    <string name="population_text">Population: %s</string>
+</resources>

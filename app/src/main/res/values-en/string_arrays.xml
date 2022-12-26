@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="options">
+        <item>Home planet</item>
+        <item>Movies they have appeared in</item>
+    </string-array>
+</resources>

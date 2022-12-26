@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".view.activities.PlanetDetail">
+
+    <ProgressBar
+        android:id="@+id/pbLoad"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivPlanetDecor"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.10"
+        app:srcCompat="@drawable/planet_decor" />
+
+    <TextView
+        android:id="@+id/tvPlanetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_light"
+        android:textSize="32sp"
+        app:fontFamily="@font/nova_round"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlanetDecor"
+        app:layout_constraintEnd_toEndOf="@+id/ivPlanetDecor"
+        app:layout_constraintStart_toStartOf="@+id/ivPlanetDecor"
+        app:layout_constraintTop_toTopOf="@+id/ivPlanetDecor"
+        tools:text="Nombre" />
+
+    <TextView
+        android:id="@+id/tvPlanetRotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_light"
+        android:textSize="24sp"
+        app:fontFamily="@font/nova_round"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlanetOrbit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlanetDecor"
+        tools:text="Periodo de rotación" />
+
+    <TextView
+        android:id="@+id/tvPlanetOrbit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_light"
+        android:textSize="24sp"
+        app:fontFamily="@font/nova_round"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetDiameter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlanetRotation"
+        tools:text="Periodo orbital" />
+
+    <TextView
+        android:id="@+id/tvPlanetDiameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_light"
+        android:textSize="24sp"
+        app:fontFamily="@font/nova_round"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetClimate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlanetOrbit"
+        tools:text="Diámetro" />
+
+    <TextView
+        android:id="@+id/tvPlanetClimate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_light"
+        android:textSize="24sp"
+        app:fontFamily="@font/nova_round"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetTerrain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlanetDiameter"
+        tools:text="Clima" />
+
+    <TextView
+        android:id="@+id/tvPlanetTerrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_light"
+        android:textSize="24sp"
+        app:fontFamily="@font/nova_round"
+        app:layout_constraintBottom_toTopOf="@id/tvPlanetPopulation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlanetClimate"
+        tools:text="Terreno" />
+
+    <TextView
+        android:id="@+id/tvPlanetPopulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_light"
+        android:textSize="24sp"
+        app:fontFamily="@font/nova_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlanetTerrain"
+        tools:text="Población" />
+</androidx.constraintlayout.widget.ConstraintLayout>
