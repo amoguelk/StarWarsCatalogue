@@ -23,6 +23,7 @@
         android:fontFamily="@font/nova_round"
         android:gravity="center_vertical"
         android:textColor="@color/white"
+        android:layout_marginStart="5dp"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/glHorizontal3"
@@ -39,6 +40,7 @@
         android:fontFamily="@font/nova_round"
         tools:text="Altura"
         android:textColor="@color/white"
+        android:layout_marginStart="5dp"
         android:textSize="14sp"
         android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="@id/glHorizontal4"
@@ -53,6 +55,7 @@
         android:fontFamily="@font/nova_round"
         tools:text="Año de nacimiento"
         android:textColor="@color/white"
+        android:layout_marginStart="5dp"
         android:textSize="14sp"
         android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="@id/glHorizontal5"
@@ -67,6 +70,7 @@
         android:fontFamily="@font/nova_round"
         tools:text="Género"
         android:textColor="@color/white"
+        android:layout_marginStart="5dp"
         android:textSize="14sp"
         android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="@id/glHorizontal6"
@@ -77,12 +81,12 @@
     <ImageView
         android:id="@+id/ivArrowRight"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/glHorizontal5"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/glHorizontal6"
         app:layout_constraintEnd_toStartOf="@+id/glVertical2"
         app:layout_constraintStart_toStartOf="@+id/glVertical1"
-        app:layout_constraintTop_toTopOf="@+id/glHorizontal3"
-        app:srcCompat="@drawable/ic_arrow_right"/>
+        app:layout_constraintTop_toTopOf="@+id/glHorizontal2"
+        app:srcCompat="@drawable/c3p0"/>
     <ImageView
         android:id="@+id/ivMore"
         android:layout_width="40dp"
@@ -145,13 +149,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.02" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glVertical2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.20" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glVertical3"
