@@ -45,7 +45,6 @@ class Splash : AppCompatActivity() {
                     val bundle = Bundle()
                     bundle.putParcelableArrayList("characters", response.body()!!.results)
                     intent.putExtras(bundle)
-                    Thread.sleep(7000)
                     startActivity(intent)
                     finish()
                 }

@@ -1,7 +1,6 @@
 package com.amog.starwarscatalogue.view.activities
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.amog.starwarscatalogue.R
 import com.amog.starwarscatalogue.databinding.ActivityMovieDisplayBinding
@@ -27,6 +26,5 @@ class MovieDisplay : AppCompatActivity() {
                 .load(resources.getStringArray(R.array.movieURLs)[movieIndex - 1])
                 .into(ivArr[i])
         }
-        binding.pbLoad.visibility = View.GONE
     }
 }
