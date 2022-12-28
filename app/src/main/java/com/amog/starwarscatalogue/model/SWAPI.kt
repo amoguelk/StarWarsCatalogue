@@ -9,5 +9,6 @@ interface SWAPI {
     fun getCharacters(): Call<CharacterList>
     @GET
     fun getPlanetDetail(@Url url: String?): Call<Planet>
-
+    @GET("api/films")
+    fun getMovies(): Call<MovieList>
 }

@@ -1,10 +1,11 @@
 package com.amog.starwarscatalogue.view.activities
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.amog.starwarscatalogue.R
 import com.amog.starwarscatalogue.databinding.ActivityMovieDisplayBinding
-import com.bumptech.glide.Glide
+import com.amog.starwarscatalogue.model.Movie
+import com.amog.starwarscatalogue.view.adapter.MovieAdapter
 
 class MovieDisplay : AppCompatActivity() {
     private lateinit var binding: ActivityMovieDisplayBinding
@@ -16,15 +17,23 @@ class MovieDisplay : AppCompatActivity() {
         overridePendingTransition(com.google.android.material.R.anim.abc_slide_in_bottom, com.google.android.material.R.anim.abc_slide_out_top)
 
         val bundle = intent.extras
-        val movies = bundle?.getStringArrayList("movies")
-        val ivArr = arrayOf(binding.ivMovie1, binding.ivMovie2, binding.ivMovie3, binding.ivMovie4, binding.ivMovie5, binding.ivMovie6)
-        for (i in 0 until movies!!.size) {
-            val m = movies[i]
+        val movieURLs = bundle?.getStringArrayList("movieURLs")
+        val allMovies = bundle?.getParcelableArrayList<Movie>("movies")
+        val movies = ArrayList<Movie>()
+
+        for (i in 0 until movieURLs!!.size) {
+            val m = movieURLs[i]
+            // Extraemos del URL del API el número de película
             val numIndex = m.substring(0, m.length - 1).lastIndexOf('/') + 1
-            val movieIndex = m[numIndex].digitToInt()
-            Glide.with(this)
-                .load(resources.getStringArray(R.array.movieURLs)[movieIndex - 1])
-                .into(ivArr[i])
+            val movieIndex = m[numIndex].digitToInt() - 1
+            // Usamos el número de película para obtener el URL de la imágen
+            movies.add(allMovies?.get(movieIndex)!!)
+        }
+
+        with (binding) {
+            pbLoad.visibility = View.GONE
+            lvMovies.adapter = MovieAdapter(this@MovieDisplay, movies)
+            lvMovies.divider = null
         }
     }
 }

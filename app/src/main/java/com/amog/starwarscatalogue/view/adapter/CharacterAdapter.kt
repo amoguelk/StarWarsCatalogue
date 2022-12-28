@@ -9,8 +9,8 @@ import com.amog.starwarscatalogue.databinding.CharacterElementBinding
 import com.amog.starwarscatalogue.model.Character
 import com.amog.starwarscatalogue.view.activities.MainActivity
 
-class Adapter(private val context : Context, private val data : ArrayList<Character>):
-    RecyclerView.Adapter<Adapter.ViewHolder>() {
+class CharacterAdapter(private val context : Context, private val data : ArrayList<Character>):
+    RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
     class ViewHolder(view: CharacterElementBinding): RecyclerView.ViewHolder(view.root) {
         val tvName = view.tvName
         val tvHeight = view.tvHeight

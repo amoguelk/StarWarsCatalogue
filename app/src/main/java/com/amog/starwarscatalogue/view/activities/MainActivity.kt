@@ -8,11 +8,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.amog.starwarscatalogue.R
 import com.amog.starwarscatalogue.databinding.ActivityMainBinding
 import com.amog.starwarscatalogue.model.Character
-import com.amog.starwarscatalogue.view.adapter.Adapter
+import com.amog.starwarscatalogue.model.Movie
+import com.amog.starwarscatalogue.view.adapter.CharacterAdapter
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private var movies: ArrayList<Movie>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -22,9 +24,10 @@ class MainActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         val characters = bundle?.getParcelableArrayList<Character>("characters")
+        movies = bundle?.getParcelableArrayList<Movie>("movies")
         if (characters != null) {
             binding.rvCatalogue.layoutManager = LinearLayoutManager(this)
-            binding.rvCatalogue.adapter = Adapter(this, characters)
+            binding.rvCatalogue.adapter = CharacterAdapter(this, characters)
         }
     }
 
@@ -42,7 +45,8 @@ class MainActivity : AppCompatActivity() {
                 } else if (selected == 1) {
                     val intent = Intent(this, MovieDisplay::class.java)
                     val bundle = Bundle()
-                    bundle.putStringArrayList("movies", character.movies)
+                    bundle.putStringArrayList("movieURLs", character.movies)
+                    bundle.putParcelableArrayList("movies", movies)
                     intent.putExtras(bundle)
                     startActivity(intent)
                 }
